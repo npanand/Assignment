@@ -24,14 +24,21 @@ namespace assignmentProject.Controllers
         }
         public IActionResult AdminLogin()
         {
+            //viewbag - dynamic
+            ViewBag.title = "AdminLogin1";
+            
             return View();
         }
         public IActionResult Contact()
         {
+            //viewdata - key /value
+            ViewData["title"] = "Contact Pages";
             return View();
         }
         public IActionResult Address()
         {
+            //tempdata - key /value
+            TempData["title"] = "Address pages";
             return View();
         }
 
