@@ -1,9 +1,16 @@
-﻿namespace assignmentProject.Models
+﻿
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
+namespace assignmentProject.Models
 {
     public class UserLogin
     {
-        public string UserName;
-
-        public string Password;
+        [Key]
+        public int Emp_id { get; set; }
+        [Required]
+        public string EmployeeName { get; set; }
+        [Required]
+        public string Dob { get; set; }
     }
 }

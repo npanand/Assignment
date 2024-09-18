@@ -10,5 +10,7 @@ namespace assignmentProject.Data
 
         }
         public DbSet<UserLogin> userlogin { get; set; }
+        public DbSet<VehicleDetails> VehicleDetails { get; set; }
+
     }
 }

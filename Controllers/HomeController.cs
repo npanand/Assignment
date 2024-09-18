@@ -26,7 +26,6 @@ namespace assignmentProject.Controllers
         {
             //viewbag - dynamic
             ViewBag.title = "AdminLogin1";
-            
             return View();
         }
         public IActionResult Contact()
