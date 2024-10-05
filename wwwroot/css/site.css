@@ -83,3 +83,10 @@ body {
     .submit-button:hover {
         background-color: #0056b3;
     }
+
+.content-center {
+    display: flex;
+    justify-content: center;
+    height: calc(100vh - 179px);
+    align-items: center;
+}

@@ -30,7 +30,7 @@
                     <td class="text-center">@items.Color</td>
                     <td class="text-center">@items.Milege</td>
                     <td class="text-center">@items.FuelType</td>
-                    <td class=" btn-group" role="group">
+                    <td class="btn-group w-100" role="group">
                                <a asp-controller="Vehicle" asp-action="Edit" asp-route-id="@items.ID"
                                    class="btn btn-warning" data-toggle="tooltip" data-placement="top" title="Edit">Edit</a>
                                 <a asp-controller="Vehicle" asp-action="Delete" asp-route-id="@items.ID"
@@ -43,7 +43,7 @@
     }
     else
     {
-    <div class="container">
+    <div class="container content-center">
         <h1>No data found</h1>
     </div>
     }

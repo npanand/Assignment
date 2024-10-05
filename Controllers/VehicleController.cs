@@ -55,8 +55,7 @@ namespace assignmentProject.Controllers
         {
             try {
                 var filterVehicle = await _dbcontext.VehicleDetails
-    .FirstOrDefaultAsync(v => v.ID == id);
-
+                         .FirstOrDefaultAsync(v => v.ID == id);
 
                 return View(filterVehicle);
             }
@@ -72,9 +71,16 @@ namespace assignmentProject.Controllers
         {
             try
             {
-                _dbcontext.VehicleDetails.Update(vehicleDetails);
-                await  _dbcontext.SaveChangesAsync();
-                return  RedirectToAction(nameof(Index));
+                if (ModelState.IsValid)
+                {
+                    _dbcontext.VehicleDetails.Update(vehicleDetails);
+                    await _dbcontext.SaveChangesAsync();
+                    return RedirectToAction(nameof(Index));
+                }
+                else
+                {
+                    return View();
+                }
             }
             catch (Exception ex)
             {
@@ -89,7 +95,6 @@ namespace assignmentProject.Controllers
             {
                 var filterVehicle = await _dbcontext.VehicleDetails
     .FirstOrDefaultAsync(v => v.ID == id);
-
 
                 return View(filterVehicle);
             }
